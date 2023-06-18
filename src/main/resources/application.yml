@@ -1,0 +1,13 @@
+server:
+  port: 8082
+
+spring:
+  config:
+    import: "optional:configserver:http://localhost:8081/" #config server uri
+  cloud:
+    config:
+      name: client #참고하고자 하는 yml 파일의 이름 앞부분
+      profile: test #참고하고자 하는 yml 파일의 이름 뒷부분 (실제 파일에서 -로 구분됌)
+
+encrypt:
+  key: key-brian
